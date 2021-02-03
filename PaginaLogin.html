@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Pagina Login</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<style type="text/css">
+		/**#formulario{
+			margin-left: 700px;
+			margin-right: 700px;
+			margin-top: 50px;/**/
+		}
+		#cadastrar{
+			margin-left: 750px;
+			margin-right: 750px;
+			margin-top: 20px;
+
+		}
+		.texto{
+			text-align: center;
+			font-family: 'Lobster', cursive;
+			color: black ;
+			font-size: 25px;
+			
+		}
+		.textos{
+			text-align: center;
+			font-family: 'Lobster', cursive;
+			color: white ;
+			background-color: #ccccff;
+		}
+		.barra{
+			border: none;
+			background-color: #ccccff;
+			color: white;
+		}
+		#texto2{
+			text-align: center;
+			font-family: 'Lobster', cursive;
+			color: white;
+			
+		}
+		.titulo{
+			text-align: center;
+			font-family: 'Lobster', cursive;
+			color: white ;
+			background-color: #ccccff;
+		}
+		body{
+			background-color: #e6e6ff;
+		}
+		
+		.icones{
+			height: 30px;
+			width: 30px;
+		}
+		#enviar{
+			background-color: pink;
+			height: 40px;
+			width: 80px;
+			border: none;
+		}
+		#login{
+			background-color: #e6e6ff;
+			border: pink;
+			margin-top: 50px;
+		}
+		#quadrado{
+			width: 500px;
+			display: block; 
+			margin-left: auto; 
+			margin-right: auto;
+		}
+		#rodape{
+			background-color: #ccccff;
+			height: 56px;
+			color: white;
+			margin-top: 30px;
+			text-align: center;
+			font-family: 'Lobster', cursive;
+			font-size: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class ="textos">CELL - Sapatos e Bolsas</h1>
+		<h3 class="textos"><a href="paginainicial.html"><button class="barra">Home</button></a> | <a href="paginaverproduto.php"><button class="barra">Produtos</button></a> | <a href="sacolaPag.html"><button class="barra">Sacola</button></a> | <a href="PaginaLogin.html"><button class="barra">Conta</button></a></h3>
+		<br>
+	<div id="quadrado">
+			<H1 class="titulo" id="login" >Login</H1>
+			<form id="formulario">
+			  <div class="form-group">
+			  	<img class="icones" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MzcuMDIsMzMwLjk4Yy0yNy44ODMtMjcuODgyLTYxLjA3MS00OC41MjMtOTcuMjgxLTYxLjAxOEMzNzguNTIxLDI0My4yNTEsNDA0LDE5OC41NDgsNDA0LDE0OA0KCQkJQzQwNCw2Ni4zOTMsMzM3LjYwNywwLDI1NiwwUzEwOCw2Ni4zOTMsMTA4LDE0OGMwLDUwLjU0OCwyNS40NzksOTUuMjUxLDY0LjI2MiwxMjEuOTYyDQoJCQljLTM2LjIxLDEyLjQ5NS02OS4zOTgsMzMuMTM2LTk3LjI4MSw2MS4wMThDMjYuNjI5LDM3OS4zMzMsMCw0NDMuNjIsMCw1MTJoNDBjMC0xMTkuMTAzLDk2Ljg5Ny0yMTYsMjE2LTIxNnMyMTYsOTYuODk3LDIxNiwyMTYNCgkJCWg0MEM1MTIsNDQzLjYyLDQ4NS4zNzEsMzc5LjMzMyw0MzcuMDIsMzMwLjk4eiBNMjU2LDI1NmMtNTkuNTUxLDAtMTA4LTQ4LjQ0OC0xMDgtMTA4UzE5Ni40NDksNDAsMjU2LDQwDQoJCQljNTkuNTUxLDAsMTA4LDQ4LjQ0OCwxMDgsMTA4UzMxNS41NTEsMjU2LDI1NiwyNTZ6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+			    <label for="exampleInputEmail1" class="texto">Endereço de Email</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="estherrodrigues@gmail.com">
+			    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+			  </div>
+			  <div class="form-group">
+			  	<img class="icones" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0yNTUuOTk5LDBjLTc5LjA0NCwwLTE0My4zNTIsNjQuMzA4LTE0My4zNTIsMTQzLjM1M3Y3MC4xOTNjMCw0Ljc4LDMuODc5LDguNjU2LDguNjU5LDguNjU2aDQ4LjA1Nw0KCQkJYzQuNzgsMCw4LjY1Ni0zLjg3Niw4LjY1Ni04LjY1NnYtNzAuMTkzYzAtNDIuOTk4LDM0Ljk4MS03Ny45OCw3Ny45NzktNzcuOThzNzcuOTc5LDM0Ljk4Miw3Ny45NzksNzcuOTh2NzAuMTkzDQoJCQljMCw0Ljc4LDMuODgsOC42NTYsOC42NjEsOC42NTZoNDguMDU3YzQuNzgsMCw4LjY1Ni0zLjg3Niw4LjY1Ni04LjY1NnYtNzAuMTkzQzM5OS4zNTIsNjQuMzA4LDMzNS4wNDQsMCwyNTUuOTk5LDB6DQoJCQkgTTM4Mi4wNCwyMDQuODloLTMwLjc0OHYtNjEuNTM3YzAtNTIuNTQ0LTQyLjc0OC05NS4yOTItOTUuMjkxLTk1LjI5MnMtOTUuMjkxLDQyLjc0OC05NS4yOTEsOTUuMjkydjYxLjUzN2gtMzAuNzQ4di02MS41MzcNCgkJCWMwLTY5LjQ5OSw1Ni41NC0xMjYuMDQsMTI2LjAzOC0xMjYuMDRjNjkuNDk5LDAsMTI2LjA0LDU2LjU0MSwxMjYuMDQsMTI2LjA0VjIwNC44OXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTQxMC42MywyMDQuODlIMTAxLjM3MWMtMjAuNTA1LDAtMzcuMTg4LDE2LjY4My0zNy4xODgsMzcuMTg4djIzMi43MzRjMCwyMC41MDUsMTYuNjgzLDM3LjE4OCwzNy4xODgsMzcuMTg4SDQxMC42Mw0KCQkJYzIwLjUwNSwwLDM3LjE4Ny0xNi42ODMsMzcuMTg3LTM3LjE4OVYyNDIuMDc4QzQ0Ny44MTcsMjIxLjU3Myw0MzEuMTM1LDIwNC44OSw0MTAuNjMsMjA0Ljg5eiBNNDMwLjUwNSw0NzQuODExDQoJCQljMCwxMC45Ni04LjkxNiwxOS44NzYtMTkuODc1LDE5Ljg3NkgxMDEuMzcxYy0xMC45NiwwLTE5Ljg3Ni04LjkxNi0xOS44NzYtMTkuODc2VjI0Mi4wNzhjMC0xMC45Niw4LjkxNi0xOS44NzYsMTkuODc2LTE5Ljg3Ng0KCQkJSDQxMC42M2MxMC45NTksMCwxOS44NzUsOC45MTYsMTkuODc1LDE5Ljg3NlY0NzQuODExeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg1LjExLDM2OS43ODFjMTAuMTEzLTguNTIxLDE1Ljk5OC0yMC45NzgsMTUuOTk4LTM0LjM2NWMwLTI0Ljg3My0yMC4yMzYtNDUuMTA5LTQ1LjEwOS00NS4xMDkNCgkJCWMtMjQuODc0LDAtNDUuMTEsMjAuMjM2LTQ1LjExLDQ1LjEwOWMwLDEzLjM4Nyw1Ljg4NSwyNS44NDQsMTYsMzQuMzY3bC05LjczMSw0Ni4zNjJjLTAuNTM1LDIuNTU0LDAuMTA4LDUuMjExLDEuNzUyLDcuMjM2DQoJCQljMS42NDUsMi4wMjMsNC4xMTMsMy4yLDYuNzIsMy4yaDYwLjczOGMyLjYwOCwwLDUuMDc2LTEuMTc2LDYuNzE5LTMuMmMxLjY0My0yLjAyNiwyLjI4Ni00LjY4MywxLjc1MS03LjIzNEwyODUuMTEsMzY5Ljc4MXoNCgkJCSBNMjcwLjg1MSwzNTguODJjLTMuMDQsMS45MzYtNC41NjUsNS41NTMtMy44MjQsOS4wODFsOC42OCw0MS4zNjZoLTM5LjQxNWw4LjY4Mi00MS4zNjNjMC43NC0zLjUyOS0wLjc4Mi03LjE0Ni0zLjgyNC05LjA4MQ0KCQkJYy04LjEwOC01LjE2LTEyLjk0OC0xMy45MTEtMTIuOTQ4LTIzLjQwNmMwLTE1LjMyNywxMi40NjktMjcuNzk2LDI3Ljc5Ny0yNy43OTZjMTUuMzI3LDAsMjcuNzk2LDEyLjQ2OSwyNy43OTYsMjcuNzk2DQoJCQlDMjgzLjc5NywzNDQuOTE0LDI3OC45NTcsMzUzLjY2MywyNzAuODUxLDM1OC44MnoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+			    <label for="exampleInputPassword1" class="texto">Senha</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="merecemos 10?">
+			  </div>
+			  <div class="form-group form-check">
+			    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+			    <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
+			  </div>
+			  <button type="submit" class="texto" id="enviar" class="btn btn-primary">Logar</button>
+			</form>
+			
+		<br>
+		<br>
+		<h3 class="texto">Caso não tenha Login:</h3>
+		<nav class="nav nav-pills nav-justified" id="cadastrar" class="texto" >
+
+		  <a class="nav-item nav-link active" style="background-color: pink; color: black; font-family: 'Lobster', cursive; font-size: 20px;"  href="cadastro.html">Clique aqui para se cadastrar!</a>
+		 </nav>
+	</div>
+	<footer class="fixed-bottom"><div id="rodape">Site desenlvolvido por Camily, Esther, Léa e Lorena</div>
+	</footer>
+</body>
+</html>
